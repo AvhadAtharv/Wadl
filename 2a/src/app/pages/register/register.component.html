@@ -1,0 +1,54 @@
+<section class="card-layout">
+  <article class="form-card">
+    <header class="section-header">
+      <h2>Register User</h2>
+      <p>Create a local profile for Assignment 2a.</p>
+    </header>
+
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="form-grid">
+      <label>
+        <span>Full Name</span>
+        <input type="text" name="fullName" [(ngModel)]="formData.fullName" required />
+      </label>
+
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" [(ngModel)]="formData.email" required />
+      </label>
+
+      <label>
+        <span>Phone</span>
+        <input type="tel" name="phone" [(ngModel)]="formData.phone" required />
+      </label>
+
+      <label>
+        <span>Roll Number</span>
+        <input type="text" name="rollNo" [(ngModel)]="formData.rollNo" required />
+      </label>
+
+      <label>
+        <span>Course</span>
+        <input type="text" name="course" [(ngModel)]="formData.course" required />
+      </label>
+
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" [(ngModel)]="formData.password" required minlength="8" />
+      </label>
+
+      <button type="submit">Create Account</button>
+    </form>
+
+    <p class="status success" *ngIf="statusMessage">{{ statusMessage }}</p>
+    <p class="status error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </article>
+
+  <aside class="info-card">
+    <h3>What this page stores</h3>
+    <ul>
+      <li>Registration details are saved in browser local storage.</li>
+      <li>The same credentials can be used on the login page.</li>
+      <li>The profile page becomes available after a successful login.</li>
+    </ul>
+  </aside>
+</section>

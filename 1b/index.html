@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FoodDash Registration - Assignment 1b</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="page-wrap">
+        <section class="hero-strip">
+          <p class="eyebrow">Assignment 1b</p>
+          <h1>FoodDash User Registration</h1>
+          <p>Register customers, restaurant partners, or riders, send data using AJAX POST, and store it in local storage.</p>
+          <nav class="top-nav">
+            <a class="active" href="index.html"><i class="bi bi-person-plus"></i> Register User</a>
+            <a href="users.html"><i class="bi bi-card-list"></i> View User List</a>
+            <a href="../1a/index.html"><i class="bi bi-grid"></i> Go to 1a Dashboard</a>
+          </nav>
+        </section>
+
+        <div class="row g-3">
+          <div class="col-lg-8">
+            <section class="module-card">
+              <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                <div>
+                  <h2 class="h4 mb-1">Registration Form</h2>
+                  <p class="text-secondary mb-0">Designed for the online food delivery app onboarding flow.</p>
+                </div>
+                <span class="pill-tag">XMLHttpRequest + localStorage</span>
+              </div>
+
+              <form id="registrationForm" class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="fullName">Full Name</label>
+                  <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Enter full name" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-control" id="email" name="email" type="email" placeholder="Enter email" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="phone">Phone</label>
+                  <input class="form-control" id="phone" name="phone" type="tel" placeholder="Enter phone number" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="city">City</label>
+                  <input class="form-control" id="city" name="city" type="text" placeholder="Pune" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="userType">User Type</label>
+                  <select class="form-select" id="userType" name="userType" required>
+                    <option value="Customer">Customer</option>
+                    <option value="Restaurant Partner">Restaurant Partner</option>
+                    <option value="Delivery Rider">Delivery Rider</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="favoriteCuisine">Favorite Cuisine</label>
+                  <select class="form-select" id="favoriteCuisine" name="favoriteCuisine" required>
+                    <option value="North Indian">North Indian</option>
+                    <option value="Fast Food">Fast Food</option>
+                    <option value="Healthy Meals">Healthy Meals</option>
+                    <option value="Desserts">Desserts</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="address">Address</label>
+                  <textarea class="form-control" id="address" name="address" rows="3" placeholder="Enter pickup or delivery address" required></textarea>
+                </div>
+                <div class="col-12 d-flex flex-wrap gap-2">
+                  <button class="btn btn-primary" id="submitButton" type="submit">Submit Registration</button>
+                  <a class="btn btn-outline-secondary" href="users.html">Open User List</a>
+                </div>
+              </form>
+
+              <div class="status-box status-info" id="statusBox">
+                Fill the form and submit. The data will be pushed through AJAX POST and then saved to local storage.
+              </div>
+            </section>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="summary-card">
+              <p class="eyebrow">How it works</p>
+              <ul class="mb-0">
+                <li>Collects registration details from the form.</li>
+                <li>Sends data with <code>XMLHttpRequest</code> using POST.</li>
+                <li>Saves entries in a local array and browser local storage.</li>
+                <li>Redirects to a new page with the data list.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/register.js"></script>
+  </body>
+</html>

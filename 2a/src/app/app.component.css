@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  color: #132238;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(63, 164, 213, 0.16), transparent 30%),
+    linear-gradient(180deg, #f2f8fc 0%, #ffffff 100%);
+}
+
+.content-area {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero-panel {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  background: #ffffff;
+  border: 1px solid #d9e7f1;
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(27, 58, 87, 0.08);
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #0b7db5;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-panel h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.subtitle {
+  margin: 0.6rem 0 0;
+  font-size: 1.05rem;
+  color: #4e6277;
+}
+
+@media (max-width: 720px) {
+  .content-area {
+    width: min(100% - 1rem, 1120px);
+    padding-top: 1rem;
+  }
+
+  .hero-panel {
+    padding: 1.25rem;
+  }
+}

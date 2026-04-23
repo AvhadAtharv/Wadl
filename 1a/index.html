@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FoodDash Admin - Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="d-flex align-items-center gap-3">
+          <div class="brand-mark">FD</div>
+          <div>
+            <p class="brand-title">FoodDash Admin</p>
+            <p class="brand-subtitle">Online Food Delivery Control Room</p>
+          </div>
+        </div>
+
+        <nav class="sidebar-links">
+          <a class="sidebar-link" href="index.html"><i class="bi bi-grid"></i> Dashboard</a>
+          <a class="sidebar-link" href="restaurants.html"><i class="bi bi-shop"></i> Restaurants</a>
+          <a class="sidebar-link" href="orders.html"><i class="bi bi-bag-check"></i> Orders</a>
+          <a class="sidebar-link" href="customers.html"><i class="bi bi-people"></i> Customers</a>
+          <a class="sidebar-link" href="analytics.html"><i class="bi bi-bar-chart"></i> Analytics</a>
+        </nav>
+
+        <div class="sidebar-note">
+          <h6>Live sync</h6>
+          <p>Customer signups from Assignment 1b appear in the customer count widget.</p>
+        </div>
+      </aside>
+
+      <main class="content-panel">
+        <section class="top-strip">
+          <div class="d-flex flex-wrap justify-content-between gap-3 align-items-center">
+            <div>
+              <h1>Operations Dashboard</h1>
+              <p>Track city-wide delivery performance, kitchen health, and demand spikes in one place.</p>
+            </div>
+            <div class="status-pill">
+              <i class="bi bi-clock-history"></i>
+              Updated <span data-current-date></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="container-fluid px-0">
+          <div class="row g-3">
+            <div class="col-sm-6 col-xl-3">
+              <div class="card stat-card h-100">
+                <div class="card-body">
+                  <p class="eyebrow">Orders Today</p>
+                  <p class="metric-value">248</p>
+                  <p class="metric-label mb-0">Across lunch and dinner windows</p>
+                  <div class="metric-delta positive"><i class="bi bi-arrow-up-right"></i> 12% vs yesterday</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card stat-card h-100">
+                <div class="card-body">
+                  <p class="eyebrow">Gross Revenue</p>
+                  <p class="metric-value">Rs 1.84L</p>
+                  <p class="metric-label mb-0">High-value meal combos leading</p>
+                  <div class="metric-delta positive"><i class="bi bi-arrow-up-right"></i> 9% basket growth</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card stat-card h-100">
+                <div class="card-body">
+                  <p class="eyebrow">Active Kitchens</p>
+                  <p class="metric-value">32</p>
+                  <p class="metric-label mb-0">27 normal, 5 under rush alert</p>
+                  <div class="metric-delta warning"><i class="bi bi-lightning-charge"></i> Avg prep 18 mins</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="card stat-card h-100">
+                <div class="card-body">
+                  <p class="eyebrow">Customer Signups</p>
+                  <p class="metric-value" data-registrations-count>00</p>
+                  <p class="metric-label mb-0">Pulled from Assignment 1b local storage</p>
+                  <div class="metric-delta positive"><i class="bi bi-people"></i> Registration module linked</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-3 mt-1">
+            <div class="col-xl-8">
+              <div class="card panel-card h-100">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                    <div>
+                      <h2 class="section-title">Recent Orders</h2>
+                      <p class="section-caption">Peak load is currently in Aundh, Baner, and Kothrud clusters.</p>
+                    </div>
+                    <button class="btn btn-primary btn-sm">Dispatch Summary</button>
+                  </div>
+
+                  <div class="table-responsive">
+                    <table class="table align-middle">
+                      <thead>
+                        <tr>
+                          <th>Order ID</th>
+                          <th>Customer</th>
+                          <th>Restaurant</th>
+                          <th>Amount</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>#FD-1048</td>
+                          <td>Riya Patil</td>
+                          <td>Spice Route Kitchen</td>
+                          <td>Rs 420</td>
+                          <td><span class="badge badge-soft-success rounded-pill">Delivered</span></td>
+                        </tr>
+                        <tr>
+                          <td>#FD-1049</td>
+                          <td>Yash More</td>
+                          <td>Burger Board</td>
+                          <td>Rs 315</td>
+                          <td><span class="badge badge-soft-info rounded-pill">Out for delivery</span></td>
+                        </tr>
+                        <tr>
+                          <td>#FD-1050</td>
+                          <td>Aarav Jagtap</td>
+                          <td>Urban Bowl Co.</td>
+                          <td>Rs 275</td>
+                          <td><span class="badge badge-soft-warning rounded-pill">Preparing</span></td>
+                        </tr>
+                        <tr>
+                          <td>#FD-1051</td>
+                          <td>Sneha Kulkarni</td>
+                          <td>Night Owl Pizza</td>
+                          <td>Rs 690</td>
+                          <td><span class="badge badge-soft-danger rounded-pill">Delayed</span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-4">
+              <div class="card panel-card h-100">
+                <div class="card-body">
+                  <h2 class="section-title">Demand Mix</h2>
+                  <p class="section-caption mb-3">Cuisine share for the last four hours.</p>
+                  <div class="bar-row">
+                    <div class="bar-meta"><span>Biryani & grills</span><span>34%</span></div>
+                    <div class="progress-track"><div class="progress-fill bg-orange" data-width="34"></div></div>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar-meta"><span>Burgers & wraps</span><span>26%</span></div>
+                    <div class="progress-track"><div class="progress-fill bg-blue" data-width="26"></div></div>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar-meta"><span>Healthy bowls</span><span>19%</span></div>
+                    <div class="progress-track"><div class="progress-fill bg-green" data-width="19"></div></div>
+                  </div>
+                  <div class="bar-row">
+                    <div class="bar-meta"><span>Desserts & drinks</span><span>21%</span></div>
+                    <div class="progress-track"><div class="progress-fill bg-yellow" data-width="21"></div></div>
+                  </div>
+
+                  <p class="footer-note">Fastest growing combo: peri peri burger + loaded fries + cold coffee.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./assets/js/dashboard.js"></script>
+  </body>
+</html>

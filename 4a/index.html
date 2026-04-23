@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atharv Avhad - Assignment 4a</title>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <link rel="stylesheet" href="./custom.css" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div data-role="page" id="home">
+      <div data-role="header" data-position="fixed" class="brand-header">
+        <h1>Atharv Avhad</h1>
+        <div data-role="navbar">
+          <ul>
+            <li><a href="#home" class="ui-btn-active">Home</a></li>
+            <li><a href="#labs">Labs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div role="main" class="ui-content">
+        <div class="hero-block">
+          <p class="eyebrow">Assignment 4a</p>
+          <h2>jQuery Mobile Website</h2>
+          <p>
+            A compact multi-page mobile website for Laboratory Practice II.
+          </p>
+          <a href="#labs" class="ui-btn ui-corner-all ui-shadow">View Lab Modules</a>
+        </div>
+
+        <ul data-role="listview" data-inset="true">
+          <li data-role="list-divider">Quick Snapshot</li>
+          <li>Student Name: Atharv Avhad</li>
+          <li>Class: TE Information Technology</li>
+          <li>Subject: Web Development Application</li>
+          <li id="today-status">Status: Ready</li>
+        </ul>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h4>WAD Mobile UI</h4>
+      </div>
+    </div>
+
+    <div data-role="page" id="labs">
+      <div data-role="header" data-position="fixed" class="brand-header">
+        <h1>Lab Modules</h1>
+        <a href="#home" data-icon="home">Home</a>
+      </div>
+
+      <div role="main" class="ui-content">
+        <div data-role="collapsible-set">
+          <div data-role="collapsible" data-collapsed="false">
+            <h3>Assignment 2a</h3>
+            <p>Angular application with registration, login, and profile workflow.</p>
+          </div>
+          <div data-role="collapsible">
+            <h3>Assignment 2b</h3>
+            <p>Docker container environment for a web application.</p>
+          </div>
+          <div data-role="collapsible">
+            <h3>Assignment 3a</h3>
+            <p>Node.js static web server using http, url, fs, and path modules.</p>
+          </div>
+          <div data-role="collapsible">
+            <h3>Assignment 3b</h3>
+            <p>Express and MongoDB CRUD APIs for user administration.</p>
+          </div>
+        </div>
+
+        <fieldset data-role="controlgroup">
+          <legend>Preferred Practice Mode</legend>
+          <input type="radio" name="practice-mode" id="mode-code" checked />
+          <label for="mode-code">Coding</label>
+          <input type="radio" name="practice-mode" id="mode-review" />
+          <label for="mode-review">Review</label>
+          <input type="radio" name="practice-mode" id="mode-demo" />
+          <label for="mode-demo">Demo</label>
+        </fieldset>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h4>Tap any section to expand</h4>
+      </div>
+    </div>
+
+    <div data-role="page" id="contact">
+      <div data-role="header" data-position="fixed" class="brand-header">
+        <h1>Contact</h1>
+        <a href="#home" data-icon="back">Back</a>
+      </div>
+
+      <div role="main" class="ui-content">
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" value="Atharv Avhad" />
+
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" value="atharv.avhad@example.com" />
+
+          <label for="message">Message</label>
+          <textarea name="message" id="message">Ready for WAD lab submission.</textarea>
+
+          <button type="submit" class="ui-btn ui-corner-all ui-shadow">Send</button>
+        </form>
+
+        <div id="form-response" class="response-box">Fill the form and tap Send.</div>
+      </div>
+
+      <div data-role="footer" data-position="fixed">
+        <h4>jQuery Mobile form demo</h4>
+      </div>
+    </div>
+  </body>
+</html>

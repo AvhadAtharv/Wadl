@@ -1,0 +1,10 @@
+{
+  "name": "assignment-3a-static-web-server",
+  "version": "1.0.0",
+  "description": "Static web server using Node.js core modules",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
