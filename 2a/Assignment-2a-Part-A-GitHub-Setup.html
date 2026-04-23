@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 2a Part A - GitHub Setup</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 36px;
+        color: #111111;
+        line-height: 1.5;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin: 8px 0;
+      }
+
+      .meta p {
+        margin: 2px 0;
+      }
+
+      .code-block {
+        margin: 10px 0 14px;
+        padding: 10px 12px;
+        border: 1px solid #cccccc;
+        background: #f7f7f7;
+        font-family: "Courier New", monospace;
+        white-space: pre-wrap;
+      }
+
+      ol li,
+      ul li {
+        margin: 6px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Assignment 2a - Part A</h1>
+    <h2>Create Version Control Account on GitHub and Push Code Using Git Commands</h2>
+
+    <div class="meta">
+      <p><strong>Name:</strong> Atharv Avhad</p>
+      <p><strong>Subject:</strong> Laboratory Practice II (Web Development Application)</p>
+      <p><strong>Assignment:</strong> 2a - Part A</p>
+    </div>
+
+    <h3>Problem Statement</h3>
+    <p>
+      Create a version control account on GitHub and use Git commands to create a
+      repository and push code to GitHub.
+    </p>
+
+    <h3>Objective</h3>
+    <p>
+      To understand GitHub account creation, Git version control workflow,
+      repository creation, and pushing local project files to a remote GitHub repository.
+    </p>
+
+    <h3>Software Requirements</h3>
+    <ul>
+      <li>GitHub account</li>
+      <li>Git installed on the system</li>
+      <li>VS Code or any text editor</li>
+      <li>Internet connection</li>
+    </ul>
+
+    <h3>Theory</h3>
+    <p>
+      Git is a distributed version control system used to track changes in source code.
+      GitHub is a cloud platform used to host Git repositories and collaborate on projects.
+      By using Git and GitHub together, a developer can manage code versions, keep project
+      history, and publish code online.
+    </p>
+
+    <h3>Steps Performed</h3>
+    <ol>
+      <li>Create a GitHub account by signing up on <strong>https://github.com</strong>.</li>
+      <li>Install Git on the local machine and verify it using the version command.</li>
+      <li>Configure Git username and email.</li>
+      <li>Create a new project folder and initialize it as a Git repository.</li>
+      <li>Add project files to the staging area.</li>
+      <li>Create the first commit.</li>
+      <li>Create a new repository on GitHub.</li>
+      <li>Link the local repository to the GitHub remote repository.</li>
+      <li>Push the local project to GitHub.</li>
+    </ol>
+
+    <h3>Git Commands Used</h3>
+    <div class="code-block">git --version
+git config --global user.name "Atharv Avhad"
+git config --global user.email "avhadatharv587@gmail.com"
+mkdir assignment-2a
+cd assignment-2a
+git init
+git status
+git add .
+git commit -m "Add Assignment 2a project"
+git branch -M main
+git remote add origin https://github.com/AvhadAtharv/repository-name.git
+git push -u origin main</div>
+
+    <h3>Explanation of Commands</h3>
+    <ul>
+      <li><strong>git --version</strong>: checks whether Git is installed.</li>
+      <li><strong>git config</strong>: sets user information for commits.</li>
+      <li><strong>git init</strong>: initializes a new local Git repository.</li>
+      <li><strong>git status</strong>: shows the status of files.</li>
+      <li><strong>git add .</strong>: adds all files to the staging area.</li>
+      <li><strong>git commit -m</strong>: saves a snapshot of staged files.</li>
+      <li><strong>git branch -M main</strong>: renames the branch to main.</li>
+      <li><strong>git remote add origin</strong>: links the local repository to GitHub.</li>
+      <li><strong>git push -u origin main</strong>: uploads code to GitHub.</li>
+    </ul>
+
+    <h3>Sample Output</h3>
+    <p>
+      After successful execution, the project files become visible in the GitHub repository
+      under the user account.
+    </p>
+
+    <h3>Conclusion</h3>
+    <p>
+      Thus, a GitHub account was used with Git commands to create a repository,
+      manage version control locally, and push the project successfully to GitHub.
+    </p>
+  </body>
+</html>

@@ -16,8 +16,9 @@ This repository contains laboratory assignments for Web Development Application,
 
 ### Assignment 2
 
-- `2a` - Angular user registration, login, and profile application
+- `2a` - GitHub and Git command write-up for version control setup
 - `2b` - Dockerized Node.js mini app for food delivery environment setup
+- `2c` - Angular user registration, login, and profile application
 
 ### Assignment 3
 
@@ -35,6 +36,7 @@ This repository contains laboratory assignments for Web Development Application,
 1b/
 2a/
 2b/
+2c/
 3a/
 3b/
 4a/
@@ -53,7 +55,7 @@ Open these directly in a browser:
 ### Angular project
 
 ```bash
-cd 2a
+cd 2c
 npm install
 npm start
 ```
