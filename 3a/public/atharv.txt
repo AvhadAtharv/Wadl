@@ -1,0 +1,3 @@
+Name: Atharv Avhad
+Subject: Laboratory Practice II (Web Development Application)
+Assignment: 3a - Static Web Server

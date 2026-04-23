@@ -1,0 +1,45 @@
+body,
+.ui-page {
+  background: #eef5fb;
+  font-family: Arial, sans-serif;
+}
+
+.brand-header {
+  background: #10324f !important;
+  border-color: #10324f !important;
+  color: #ffffff !important;
+}
+
+.brand-header .ui-title,
+.brand-header .ui-btn {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+.hero-block {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(16, 50, 79, 0.08);
+}
+
+.hero-block h2 {
+  margin-top: 0;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  color: #0b7db5;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.response-box {
+  margin-top: 1rem;
+  padding: 0.9rem 1rem;
+  background: #ffffff;
+  border-left: 4px solid #0b7db5;
+  border-radius: 8px;
+  color: #17395a;
+}

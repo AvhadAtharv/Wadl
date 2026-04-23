@@ -1,0 +1,9 @@
+services:
+  docker-environment:
+    build: .
+    container_name: atharv-assignment-2b
+    environment:
+      HOST: 0.0.0.0
+      PORT: 3000
+    ports:
+      - "3000:3000"

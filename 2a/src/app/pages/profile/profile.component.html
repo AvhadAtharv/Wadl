@@ -1,0 +1,31 @@
+<section class="profile-layout" *ngIf="user">
+  <article class="profile-card">
+    <div class="profile-top">
+      <div>
+        <p class="tag">Logged In User</p>
+        <h2>{{ user.fullName }}</h2>
+        <p class="muted">{{ user.course }}</p>
+      </div>
+      <button type="button" (click)="logout()">Logout</button>
+    </div>
+
+    <dl class="profile-grid">
+      <div>
+        <dt>Email</dt>
+        <dd>{{ user.email }}</dd>
+      </div>
+      <div>
+        <dt>Phone</dt>
+        <dd>{{ user.phone }}</dd>
+      </div>
+      <div>
+        <dt>Roll Number</dt>
+        <dd>{{ user.rollNo }}</dd>
+      </div>
+      <div>
+        <dt>Saved Profiles</dt>
+        <dd>{{ totalUsers }}</dd>
+      </div>
+    </dl>
+  </article>
+</section>

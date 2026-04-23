@@ -1,0 +1,22 @@
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <span class="brand-mark">AA</span>
+      <div>
+        <p class="brand-title">Atharv Avhad</p>
+        <p class="brand-subtitle">Web Development Application Lab</p>
+      </div>
+    </div>
+
+    <nav class="nav-links">
+      <a routerLink="/register" routerLinkActive="active">Register</a>
+      <a routerLink="/login" routerLinkActive="active">Login</a>
+      <a routerLink="/profile" routerLinkActive="active">Profile</a>
+    </nav>
+
+    <div class="status-chip">
+      <span>{{ isLoggedIn ? 'Active user' : 'Preview mode' }}</span>
+      <strong>{{ activeUserName }}</strong>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,6 @@
+{
+  "studentName": "Atharv Avhad",
+  "assignment": "3a",
+  "topic": "Static Web Server",
+  "technology": ["Node.js", "http", "url", "fs", "path"]
+}

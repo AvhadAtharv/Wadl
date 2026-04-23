@@ -1,0 +1,25 @@
+<section class="login-wrapper">
+  <article class="login-card">
+    <header>
+      <h2>Login User</h2>
+      <p>Use the registered credentials to access the profile component.</p>
+    </header>
+
+    <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" [(ngModel)]="credentials.email" required />
+      </label>
+
+      <label>
+        <span>Password</span>
+        <input type="password" name="password" [(ngModel)]="credentials.password" required />
+      </label>
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p class="status success" *ngIf="statusMessage">{{ statusMessage }}</p>
+    <p class="status error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </article>
+</section>
